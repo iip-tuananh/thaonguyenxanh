@@ -24,12 +24,6 @@ class ProductController extends Controller
                 'typeCate' => function ($query) {
                     $query->select('id','name','slug'); 
                 },
-                'typeTwo' => function ($query) {
-                    $query->select('id','name','slug'); 
-                },
-                'brand' => function ($query) {
-                    $query->select('id','name','slug'); 
-                },
             ])->orderBy('category', 'asc')->get();
         }else{
             $data = Product::with([
@@ -37,12 +31,6 @@ class ProductController extends Controller
                     $query->select('id', 'name', 'slug');
                 },
                 'typeCate' => function ($query) {
-                    $query->select('id','name','slug'); 
-                },
-                'typeTwo' => function ($query) {
-                    $query->select('id','name','slug'); 
-                },
-                'brand' => function ($query) {
                     $query->select('id','name','slug'); 
                 },
             ])->where('slug', 'LIKE', '%'.$keyword.'%')->orderBy('category', 'asc')->get();
