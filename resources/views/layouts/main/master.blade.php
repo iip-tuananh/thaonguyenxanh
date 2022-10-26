@@ -2,31 +2,36 @@
 <html lang="vi">
    <head>
       <meta charset="UTF-8" />
-      <link rel="icon" href="{{url(''.$setting->favicon)}}"
-         type="image/x-icon" />
-      <link rel="apple-touch-icon"
-         href="{{url(''.$setting->favicon)}}">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+      <title>@yield('title')</title>
+      <meta name="description" content="">
+      <meta name="keywords" content="@yield('title')"/>
       <meta name="robots" content="noodp,index,follow" />
-      <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
       <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
       <meta name="csrf-token" content="{{ csrf_token() }}" />
-      <title>@yield('title')</title>
-   
-      <link rel="canonical" href="{{\Request::url()}}" />
+      <meta name="description" content="@yield('description')" />
+      <link rel="canonical" href="{{url()->current()}}" />
       <meta property="og:locale" content="vi_VN" />
       <meta property="og:type" content="article" />
       <meta property="og:title" content="@yield('title')" />
       <meta property="og:description" content="@yield('description')" />
-      <meta property="og:url" content="{{\Request::url()}}" />
-      <meta property="og:site_name" content="mộc đào gia" />
+      <meta property="og:url" content="{{url()->current()}}" />
+      <meta property="og:site_name" content="thaonguyenxanh.info" />
+      <meta property="og:updated_time" content="2021-08-28T22:06:30+07:00" />
       <meta property="og:image" content="@yield('image')" />
       <meta property="og:image:secure_url" content="@yield('image')" />
-      <meta property="og:image:width" content="548" />
-      <meta property="og:image:height" content="343" />
+      <meta property="og:image:width" content="598" />
+      <meta property="og:image:height" content="333" />
+      <meta property="og:image:alt" content="" />
+      <meta property="og:image:type" content="image/jpeg" />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:description" content="@yield('description')" />
       <meta name="twitter:title" content="@yield('title')" />
+      <meta name="twitter:description" content="@yield('description')" />
       <meta name="twitter:image" content="@yield('image')" />
+      <meta name="google-site-verification" content="dKF5ynJ5SQgD62YPzBfNC8W7q3wzLANMxpoawuJF63I" />
+      <!-- Fav Icon -->
+      <link rel="icon" href="{{url(''.$setting->favicon)}}" type="image/x-icon">
       <!-- Css Files -->
       <link href="{{asset('frontend/css/fonts.css')}}" rel="stylesheet">
       <link href="{{asset('frontend/css/animate.min.css')}}" rel="stylesheet">
