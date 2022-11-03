@@ -5,7 +5,8 @@
             <h2 class="title-footer">{{$setting->company}}</h2>
             <div class="info-footer">
                <p>{{$setting->webname}}</p>
-               <p>Địa chỉ: {{$setting->address1}}</p>
+               <p>VPGD: {{$setting->address1}}</p>
+               <p>Địa chỉ: {{$setting->address2}}</p>
                <p>Hotline: <span style="color:#f1c40f;">{{$setting->phone1}}</span></p>
                <p>Email: <a href="mailto:{{$setting->email}}" target="_blank">{{$setting->email}}</a></p>
                <p>Website: <a href="{{route('home')}}">{{route('home')}}</a></p>
